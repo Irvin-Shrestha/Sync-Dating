@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1023907154953",
+    "project_id": "final-sync-170cb",
+    "storage_bucket": "final-sync-170cb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1023907154953:android:7518c47dfd51db5ec63cd8",
+        "android_client_info": {
+          "package_name": "com.example.syncdating"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1023907154953-87dg0quadkqvl4fs3spg6o8ktalcd3ga.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAxiiTdiZDOryME7DneUA0nvgMYwew_q7o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1023907154953-87dg0quadkqvl4fs3spg6o8ktalcd3ga.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
