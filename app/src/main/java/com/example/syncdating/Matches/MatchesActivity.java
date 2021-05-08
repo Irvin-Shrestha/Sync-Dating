@@ -1,6 +1,8 @@
 package com.example.syncdating.Matches;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -18,6 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MatchesActivity extends AppCompatActivity {
+    private ImageView mbackbtn4;
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mMatchesAdapter;
     private RecyclerView.LayoutManager mMatchesLayoutManager;
@@ -39,12 +42,17 @@ public class MatchesActivity extends AppCompatActivity {
         mMatchesAdapter = new MatchesAdapter(getDataSetMatches(), MatchesActivity.this);
         mRecyclerView.setAdapter(mMatchesAdapter);
 
+        mbackbtn4 = (ImageView) findViewById(R.id.back_btn4);
+
         getUserMatchId();
 
-
-
-
-
+        mbackbtn4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+                return;
+            }
+        });
     }
 
     private void getUserMatchId() {

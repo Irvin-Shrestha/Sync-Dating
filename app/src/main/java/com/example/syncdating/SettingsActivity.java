@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -35,12 +36,13 @@ import java.util.Map;
 
 public class SettingsActivity extends AppCompatActivity {
 
-    private EditText mNameField, mPhoneField;
+    private EditText mPhoneField;
 
-    private Button mBack, mConfirm;
+    private TextView mNameField;
 
-    private ImageView mProfileImage;
+    private Button mConfirm;
 
+    private ImageView mProfileImage, mback_btn3;
 
     private FirebaseAuth mAuth;
     private DatabaseReference mUserDatabase;
@@ -54,12 +56,12 @@ public class SettingsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
 
-        mNameField = (EditText) findViewById(R.id.name);
+        mNameField = (TextView) findViewById(R.id.name);
         mPhoneField = (EditText) findViewById(R.id.phone);
 
         mProfileImage = (ImageView) findViewById(R.id.profileImage);
 
-        mBack = (Button) findViewById(R.id.back);
+        mback_btn3 = (ImageView) findViewById(R.id.back_btn3);
         mConfirm = (Button) findViewById(R.id.confirm);
 
         mAuth = FirebaseAuth.getInstance();
@@ -83,7 +85,7 @@ public class SettingsActivity extends AppCompatActivity {
                 saveUserInformation();
             }
         });
-        mBack.setOnClickListener(new View.OnClickListener() {
+        mback_btn3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 finish();
@@ -192,7 +194,7 @@ public class SettingsActivity extends AppCompatActivity {
 
     public void logoutUser(View view) {
         mAuth.signOut();
-        Intent intent = new Intent(SettingsActivity.this, ChooseLoginRegistrationActivity.class);
+        Intent intent = new Intent(SettingsActivity.this, Login1.class);
         startActivity(intent);
         finish();
         return;

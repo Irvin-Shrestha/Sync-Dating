@@ -8,24 +8,22 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class ChooseLoginRegistrationActivity extends AppCompatActivity {
-
-    private Button mLogin, mRegister;
-    private TextView mPrivacy;
+public class Login1 extends AppCompatActivity {
+    private Button mLogin;
+    private TextView mRegister;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_choose_login_registration);
+        setContentView(R.layout.activity_login1);
 
-        mLogin = (Button) findViewById(R.id.login);
-        mRegister = (Button) findViewById(R.id.register);
-        mPrivacy = (TextView) findViewById(R.id.Privacy);
+        mLogin = (Button) findViewById(R.id.Loginbtn1);
+        mRegister = (TextView) findViewById(R.id.Register1);
 
         mLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ChooseLoginRegistrationActivity.this, LoginActivity.class);
+                Intent intent = new Intent(Login1.this, LoginActivity.class);
                 startActivity(intent);
             }
         });
@@ -33,7 +31,7 @@ public class ChooseLoginRegistrationActivity extends AppCompatActivity {
         mRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ChooseLoginRegistrationActivity.this, RegistrationActivity.class);
+                Intent intent = new Intent(Login1.this, Registration1.class);
                 startActivity(intent);
             }
         });

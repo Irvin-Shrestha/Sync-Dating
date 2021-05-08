@@ -16,6 +16,8 @@
         android:layout_gravity="center">
         <TextView
             android:paddingBottom="20sp"
+            android:textSize="20sp"
+            android:textColor="@color/black"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Match's Name"
@@ -24,6 +26,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Match's ID"
+            android:textSize="0sp"
             android:layout_gravity="center"
             android:id="@+id/Matchid"/>
     </LinearLayout>

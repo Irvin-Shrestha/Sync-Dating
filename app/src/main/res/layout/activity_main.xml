@@ -18,6 +18,7 @@
             android:layout_height="wrap_content"
             android:text="Matches"
             android:onClick="goToMatches" />
+
         <Button
             android:layout_weight="1"
             android:layout_width="wrap_content"
@@ -26,27 +27,38 @@
             android:onClick="goToSettings" />
     </LinearLayout>
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="New Recommendations"
+        android:textAlignment="center"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        android:gravity="center_horizontal" />
+
     <com.lorentzos.flingswipe.SwipeFlingAdapterView
         android:id="@+id/frame"
-        android:background="@android:color/white"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@android:color/white"
         app:rotation_degrees="15.5"
-        tools:context=".MyActivity"/>
+        tools:context=".MyActivity" />
 
-    <ImageView
-        android:id="@+id/icon_accept"
-        android:layout_width="116dp"
-        android:layout_height="111dp"
-        android:layout_marginLeft="250dp"
-        android:layout_marginTop="-150dp"
-        android:src="@drawable/ic_love" />
+<!--    <ImageView-->
+<!--        android:id="@+id/icon_accept"-->
+<!--        android:layout_width="116dp"-->
+<!--        android:layout_height="111dp"-->
+<!--        android:layout_marginLeft="250dp"-->
+<!--        android:layout_marginTop="-150dp"-->
+<!--        android:src="@drawable/ic_love" />-->
 
-    <ImageView
-        android:id="@+id/ic_x_button"
-        android:layout_width="76dp"
-        android:layout_height="79dp"
-        android:layout_marginLeft="80dp"
-        android:layout_marginTop="-95dp"
-        android:src="@drawable/ic_x_button" />
+<!--    <ImageView-->
+<!--        android:id="@+id/ic_x_button"-->
+<!--        android:layout_width="76dp"-->
+<!--        android:layout_height="79dp"-->
+<!--        android:layout_marginLeft="80dp"-->
+<!--        android:layout_marginTop="-95dp"-->
+<!--        android:src="@drawable/ic_x_button" />-->
+
+
 </LinearLayout>

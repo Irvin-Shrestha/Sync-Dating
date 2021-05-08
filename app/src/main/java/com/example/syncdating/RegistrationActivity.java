@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -29,6 +30,7 @@ public class RegistrationActivity extends AppCompatActivity {
     private Button mRegister;
     private EditText mEmail, mPassword, mName;
     private TextView mLoginRe, mRegistrationView;
+    private ImageView mBack2;
 
     private RadioGroup mRadioGroup;
 
@@ -60,8 +62,17 @@ public class RegistrationActivity extends AppCompatActivity {
         mEmail = (EditText) findViewById(R.id.email);
         mPassword = (EditText) findViewById(R.id.password);
         mName = (EditText) findViewById(R.id.name);
+        mBack2 = (ImageView) findViewById(R.id.back_btn2);
 
         mRadioGroup = (RadioGroup) findViewById(R.id.radioGroup);
+
+        mBack2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(RegistrationActivity.this, Registration1.class);
+                startActivity(intent);
+            }
+        });
 
         mLoginRe.setOnClickListener(new View.OnClickListener() {
             @Override

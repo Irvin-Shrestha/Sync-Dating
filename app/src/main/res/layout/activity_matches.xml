@@ -4,9 +4,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.syncdating.Matches.MatchesActivity">
+    tools:context="com.example.syncdating.Matches.MatchesActivity"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/back_btn4"
+        android:layout_width="64dp"
+        android:layout_height="72dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:src="@mipmap/arrow1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Matches and Messages"
+        android:layout_marginLeft="20dp"
+        android:textAlignment="center"
+        android:gravity="center_horizontal"
+        android:textSize="25dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/bold"
+        android:textColor="@color/black"/>
 
     <androidx.core.widget.NestedScrollView
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="-362dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 

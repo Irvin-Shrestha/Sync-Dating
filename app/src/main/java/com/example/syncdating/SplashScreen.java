@@ -3,7 +3,6 @@ package com.example.syncdating;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.view.Window;
 import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.widget.ImageView;
@@ -34,7 +33,7 @@ public class SplashScreen extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(SplashScreen.this, ChooseLoginRegistrationActivity.class);
+                Intent intent = new Intent(SplashScreen.this, Login1.class);
                 startActivity(intent);
                 finish();
             }

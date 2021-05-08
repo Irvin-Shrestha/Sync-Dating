@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -31,8 +30,8 @@ public class MainActivity extends AppCompatActivity {
     private com.example.syncdating.Cards.arrayAdapter arrayAdapter;
     private int i;
 
-    private ImageView ic_icon_accept;
-    private ImageView ic_icon_reject;
+//    private ImageView ic_icon_accept;
+//    private ImageView ic_icon_reject;
 
     private FirebaseAuth mAuth;
 
@@ -48,15 +47,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ic_icon_accept = (ImageView) findViewById(R.id.icon_accept);
-        ic_icon_reject = (ImageView) findViewById(R.id.ic_x_button);
+//        ic_icon_accept = (ImageView) findViewById(R.id.icon_accept);
+//        ic_icon_reject = (ImageView) findViewById(R.id.ic_x_button);
 
-        ic_icon_accept.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
+//        ic_icon_accept.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//            }
+//        });
 
         usersDb = FirebaseDatabase.getInstance().getReference().child("Users");
 
@@ -106,7 +105,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
         // Optionally add an OnItemClickListener
         flingContainer.setOnItemClickListener(new SwipeFlingAdapterView.OnItemClickListener() {
             @Override
@@ -114,7 +112,6 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, "Item Clicked", Toast.LENGTH_SHORT).show();
             }
         });
-
     }
 
     private void isConnectionMatch(String userId) {
@@ -199,9 +196,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
-
-
 
     public void goToSettings(View view) {
         Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
