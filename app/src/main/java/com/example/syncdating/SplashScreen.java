@@ -9,6 +9,8 @@ import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.syncdating.LoginAndRegistration.Login1;
+
 public class SplashScreen extends AppCompatActivity {
     private static int SPLASH_SCREEN = 5000;
 

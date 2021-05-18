@@ -12,8 +12,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SyncDating">
-        <activity android:name=".Registration1"></activity>
-        <activity android:name=".Login1" />
+        <activity android:name=".RegistrationPage2"></activity>
+        <activity android:name=".ForgetPassword.ForgetPasswordSuccessMessage" />
+        <activity android:name=".ForgetPassword.SetNewPassword" />
+        <activity android:name=".ForgetPassword.MakeSelection" />
+        <activity android:name=".ForgetPassword.ForgetPassword" />
+        <activity android:name=".LoginAndRegistration.Login1" />
         <activity android:name=".MainActivity" />
         <activity android:name=".SplashScreen">
             <intent-filter>
@@ -22,8 +26,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RegistrationActivity" />
-        <activity android:name=".LoginActivity" />
+        <activity android:name=".LoginAndRegistration.LoginActivity" />
         <activity android:name=".SettingsActivity" />
         <activity android:name=".Matches.MatchesActivity" />
         <activity android:name=".Chat.ChatActivity" />

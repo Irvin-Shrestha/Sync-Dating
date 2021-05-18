@@ -1,7 +1,9 @@
-package com.example.syncdating;
+package com.example.syncdating.LoginAndRegistration;
 
+import android.app.ActivityOptions;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Pair;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -14,6 +16,9 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.syncdating.MainActivity;
+import com.example.syncdating.R;
+import com.example.syncdating.RegistrationPage2;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -27,10 +32,11 @@ import java.util.Map;
 
 public class RegistrationActivity extends AppCompatActivity {
 
-    private Button mRegister;
+    private Button mNext;
     private EditText mEmail, mPassword, mName;
     private TextView mLoginRe, mRegistrationView;
     private ImageView mBack2;
+
 
     private RadioGroup mRadioGroup;
 
@@ -56,7 +62,7 @@ public class RegistrationActivity extends AppCompatActivity {
             }
         };
 
-        mRegister = (Button) findViewById(R.id.register);
+        mNext = (Button) findViewById(R.id.next);
         mRegistrationView = (TextView) findViewById(R.id.RegistrationView);
         mLoginRe = (TextView) findViewById(R.id.Loginre);
         mEmail = (EditText) findViewById(R.id.email);
@@ -126,5 +132,20 @@ public class RegistrationActivity extends AppCompatActivity {
     protected void onStop() {
         super.onStop();
         mAuth.removeAuthStateListener(firebaseAuthStateListener);
+    }
+
+    public void callNextSignupScreen(View view) {
+        Intent intent = new Intent(getApplicationContext(), RegistrationPage2.class);
+
+        //Add Transition
+        Pair[] pairs = new Pair[4];
+
+        pairs[0] = new Pair<View, String>(mBack2, "transition_back_arrow_btn");
+        pairs[1] = new Pair<View, String>(mNext, "transition_next_btn");
+        pairs[2] = new Pair<View, String>(mLoginRe, "transition_login_btn");
+        pairs[3] = new Pair<View, String>(mRegistrationView, "transition_title_text");
+
+        ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(Signup.this, pairs);
+
     }
 }

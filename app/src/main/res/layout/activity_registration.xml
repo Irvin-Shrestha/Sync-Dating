@@ -1,29 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.syncdating.RegistrationActivity"
-    android:orientation="vertical">
+    tools:context="com.example.syncdating.LoginAndRegistration.RegistrationActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
     <ImageView
         android:id="@+id/back_btn2"
         android:layout_width="64dp"
         android:layout_height="72dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"
-        android:src="@mipmap/arrow1" />
+        android:src="@mipmap/arrow1"
+        android:transitionName="transition_back_arrow_btn"/>
 
-    <ImageView
-        android:id="@+id/imageLogo"
-        android:layout_width="204dp"
-        android:layout_height="216dp"
-        android:layout_marginLeft="95dp"
-        android:layout_marginTop="-100dp"
-        android:src="@mipmap/logo" />
+        <ImageView
+            android:id="@+id/imageLogo"
+            android:layout_width="204dp"
+            android:layout_height="216dp"
+            android:layout_marginLeft="95dp"
+            android:layout_marginTop="00dp"
+            android:src="@mipmap/logo"
+            />
 
-    <TextView
+        <TextView
         android:id="@+id/RegistrationView"
         android:layout_width="wrap_content"
         android:layout_marginTop="-38dp"
@@ -35,7 +40,8 @@
         android:fontFamily="@font/bold"
         android:textSize="25dp"
         android:background="@color/white"
-        android:gravity="center_horizontal" />
+        android:gravity="center_horizontal"
+        android:transitionName="transition_title_text"/>
 
     <EditText
         android:layout_marginTop="10dp"
@@ -50,7 +56,7 @@
     <RadioGroup
         android:layout_marginLeft="50dp"
         android:layout_width="310dp"
-        android:layout_height="100sp"
+        android:layout_height="55sp"
         android:layout_marginTop="5dp"
         android:id="@+id/radioGroup">
 
@@ -76,6 +82,26 @@
         android:inputType="textPersonName"
         android:background="@drawable/input_field"/>
 
+<!--        <com.hbb20.CountryCodePicker-->
+<!--            android:id="@+id/country_code_picker"-->
+<!--            android:layout_width="300dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginLeft="60dp"-->
+<!--            app:ccp_autoDetectCountry="true"-->
+<!--            app:ccp_showFlag="true"-->
+<!--            app:ccp_showNameCode="true"-->
+<!--            app:ccp_showFullName="true"/>-->
+
+<!--        <EditText-->
+<!--            android:layout_marginLeft="50dp"-->
+<!--            android:layout_marginTop="5dp"-->
+<!--            android:layout_width="310dp"-->
+<!--            android:layout_height="50sp"-->
+<!--            android:hint="Phone Number"-->
+<!--            android:id="@+id/phone"-->
+<!--            android:inputType="textPersonName"-->
+<!--            android:background="@drawable/input_field"/>-->
+
     <EditText
         android:layout_marginLeft="50dp"
         android:layout_marginTop="10dp"
@@ -85,15 +111,17 @@
         android:id="@+id/password"
         android:inputType="textPassword"
         android:background="@drawable/input_field"
-        app:passwordToggleEnabled="true"/>
+        app:passwordToggleEnabled="true" />
 
     <Button
         android:layout_marginLeft="50dp"
         android:layout_marginTop="10dp"
         android:layout_width="162dp"
         android:layout_height="53dp"
-        android:text="Register"
-        android:id="@+id/register"
+        android:text="Next"
+        android:transitionName="transition_next_btn"
+        android:onClick="callNextSignupScreen"
+        android:id="@+id/next"
         android:background="@drawable/button"/>
 
     <TextView
@@ -114,9 +142,13 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/bold"
         android:text="Login."
+        android:transitionName="transition_login_btn"
         android:textColor="@color/Primary"
         android:layout_marginTop="-20dp"
         android:layout_marginLeft="180dp"
         app:layout_constraintVertical_bias="0.952"
         tools:ignore="MissingConstraints"/>
-</LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

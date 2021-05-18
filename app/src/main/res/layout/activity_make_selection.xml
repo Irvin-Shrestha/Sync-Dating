@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ForgetPassword.ForgetPassword"
+    android:background="@color/white"
+    android:padding="30dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:src="@mipmap/arrow1"
+            android:layout_width="64dp"
+            android:layout_height="72dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="-40dp"
+            android:src="@mipmap/logo"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Forget Password"
+            android:textColor="@color/black"
+            android:textSize="40sp"
+            android:textAllCaps="true"
+            android:fontFamily="@font/bold"
+            android:layout_marginTop="10dp"
+            android:textAlignment="center"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select which contact detail should we use to reset your password?"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textAllCaps="true"
+            android:fontFamily="@font/bold"
+            android:textAlignment="center"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_marginTop="50dp"
+            android:background="@color/LightGrey"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/mobile_icon"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/ic_smartphone"/>
+
+            <TextView
+                android:id="@+id/mobile_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Via sms:"
+                android:textSize="25sp"
+                android:fontFamily="@font/bold"
+                android:layout_toRightOf="@id/mobile_icon"
+                android:layout_marginTop="35dp"/>
+
+            <TextView
+                android:id="@+id/mobile_des"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+977"
+                android:textSize="25sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/bold"
+                android:layout_below="@id/mobile_title"
+                android:layout_toRightOf="@+id/mobile_icon"
+                android:layout_marginTop="20dp"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#66000000"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/LightGrey"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/mail_icon"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/ic_email"/>
+
+            <TextView
+                android:id="@+id/mail_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Via mail:"
+                android:textSize="25sp"
+                android:fontFamily="@font/bold"
+                android:layout_toRightOf="@id/mail_icon"
+                android:layout_marginTop="35dp"/>
+
+            <TextView
+                android:id="@+id/mail_des"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="support@gmail.com"
+                android:textSize="25sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/bold"
+                android:layout_toRightOf="@id/mail_icon"
+                android:layout_below="@id/mail_title"
+                android:layout_marginTop="10dp"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#66000000"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>
